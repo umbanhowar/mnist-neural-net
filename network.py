@@ -86,6 +86,7 @@ class Network(object):
             else:
                 # Print out progress
                 print "Epoch {0} complete".format(j)
+        return (self.weights, self.biases)
 
     def update_mini_batch(self, mini_batch, eta):
         # Container for the gradient of the biases
