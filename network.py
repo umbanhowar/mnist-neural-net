@@ -154,6 +154,11 @@ class Network(object):
         # Our network makes its classification based on which
         # output neuron has the highest value - this line generates
         # a list of tuples (predicted class, actual class).
+        x, y = test_data[0]
+        print x
+        print type(x)
+        print len(x)
+        print x.shape
         test_results = [(np.argmax(self.feedforward(x)),y)
                         for (x,y) in test_data]
         # Return the number of correct results.
